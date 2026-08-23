@@ -12,8 +12,8 @@
   --gold-2: var(--chartreuse-soft);
   --line: rgba(22, 32, 24, 0.12);
   --shadow: 0 30px 80px rgba(22, 32, 24, 0.12);
-  --serif: "Cormorant Garamond", Georgia, serif;
-  --sans: "Outfit", system-ui, sans-serif;
+  --serif: "Lufga", system-ui, sans-serif;
+  --sans: "Lufga", system-ui, sans-serif;
   --hero-shift: 0px;
 }
 
