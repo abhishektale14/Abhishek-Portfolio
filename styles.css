@@ -423,6 +423,7 @@ a {
 }
 
 .hero-copy {
+  min-width: 0;
   padding: 10vh 7vw 8vh;
   transform: translateY(calc(var(--hero-shift) * -0.35));
   transition: transform 0.15s linear;
@@ -454,10 +455,11 @@ a {
 }
 
 .hero h1 {
+  max-width: 100%;
   margin: 18px 0 8px;
   font-family: var(--serif);
   font-weight: 600;
-  font-size: clamp(4.2rem, 10vw, 8.4rem);
+  font-size: clamp(3.8rem, 7vw, 6.4rem);
   line-height: 0.82;
   letter-spacing: -0.03em;
 }
