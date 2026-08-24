@@ -222,8 +222,9 @@ a {
   z-index: 1;
   width: min(27vw, 360px);
   margin: 0 auto 0 7vw;
+  transform: rotate(0deg);
   filter: saturate(0.86) contrast(1.04);
-  animation: image-in 1s 650ms both;
+  animation: slide-in-left 1s 160ms both;
 }
 
 .hero-photo::after {
@@ -239,6 +240,7 @@ a {
   width: 100%;
   aspect-ratio: 0.7;
   object-fit: cover;
+  transform: rotate(0deg);
   border: 8px solid rgba(243, 245, 235, 0.92);
   box-shadow: 0 26px 65px rgba(5, 22, 16, 0.28);
 }
@@ -869,6 +871,10 @@ a {
   animation: rise-in 0.8s both;
 }
 
+.hero-panel > * {
+  animation-name: slide-in-right;
+}
+
 .hero-copy > *:nth-child(1) { animation-delay: 120ms; }
 .hero-copy > *:nth-child(2) { animation-delay: 200ms; }
 .hero-copy > *:nth-child(3) { animation-delay: 300ms; }
@@ -883,6 +889,16 @@ a {
 @keyframes rise-in {
   from { opacity: 0; transform: translateY(18px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slide-in-left {
+  from { opacity: 0; transform: translateX(-54px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slide-in-right {
+  from { opacity: 0; transform: translateX(54px); }
+  to { opacity: 1; transform: translateX(0); }
 }
 
 @media (max-width: 980px) {
