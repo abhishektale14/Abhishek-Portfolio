@@ -1,3 +1,5 @@
+@import url("https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap");
+
 :root {
   --paper: #f3f5eb;
   --paper-2: #dcebd6;
@@ -12,8 +14,8 @@
   --gold-2: var(--chartreuse-soft);
   --line: rgba(22, 32, 24, 0.12);
   --shadow: 0 30px 80px rgba(22, 32, 24, 0.12);
-  --serif: "Lufga", system-ui, sans-serif;
-  --sans: "Lufga", system-ui, sans-serif;
+  --serif: "General Sans", system-ui, sans-serif;
+  --sans: "General Sans", system-ui, sans-serif;
   --hero-shift: 0px;
 }
 
@@ -470,7 +472,7 @@ a {
 }
 
 .hero h1 em {
-  font-style: italic;
+  font-style: normal;
   color: var(--gold-2);
 }
 
