@@ -192,7 +192,8 @@ a {
 .hero {
   min-height: calc(100vh - 74px);
   display: grid;
-  grid-template-columns: 1.4fr 0.8fr;
+  grid-template-columns: 0.8fr 1.4fr 0.8fr;
+  align-items: center;
   position: relative;
   overflow: hidden;
   background: linear-gradient(135deg, var(--forest) 0%, var(--emerald-deep) 58%, #176a48 100%);
@@ -216,19 +217,16 @@ a {
   contain: paint;
 }
 
-.hero-visual {
-  position: absolute;
+.hero-photo {
+  position: relative;
   z-index: 1;
-  right: 38vw;
-  top: 12vh;
-  width: min(17vw, 220px);
-  margin: 0;
-  transform: rotate(3deg);
+  width: min(27vw, 360px);
+  margin: 0 auto 0 7vw;
   filter: saturate(0.86) contrast(1.04);
   animation: image-in 1s 650ms both;
 }
 
-.hero-visual::after {
+.hero-photo::after {
   content: "";
   position: absolute;
   inset: 12px -12px -12px 12px;
@@ -236,16 +234,16 @@ a {
   border: 1px solid rgba(184, 245, 66, 0.35);
 }
 
-.hero-visual img {
+.hero-photo img {
   display: block;
   width: 100%;
-  aspect-ratio: 0.88;
+  aspect-ratio: 0.7;
   object-fit: cover;
   border: 8px solid rgba(243, 245, 235, 0.92);
   box-shadow: 0 26px 65px rgba(5, 22, 16, 0.28);
 }
 
-.hero-visual figcaption {
+.hero-photo figcaption {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -254,12 +252,6 @@ a {
   font-size: 0.72rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-}
-
-.hero-visual figcaption span {
-  width: 24px;
-  height: 1px;
-  background: var(--gold);
 }
 
 .orbit {
@@ -534,11 +526,9 @@ a {
   display: grid;
   align-content: end;
   gap: 0;
-  position: absolute;
-  right: 7vw;
-  bottom: 6vh;
-  width: min(29vw, 390px);
-  padding: 0;
+  position: relative;
+  width: auto;
+  padding: 0 7vw 0 0;
   transform: translateY(var(--hero-shift));
   transition: transform 0.15s linear;
 }
@@ -937,7 +927,7 @@ a {
     padding: 0 7vw 8vh;
   }
 
-  .hero-visual {
+  .hero-photo {
     position: relative;
     right: auto;
     top: auto;
@@ -989,7 +979,7 @@ a {
 
   .hero-copy,
   .hero-panel,
-  .hero-visual,
+  .hero-photo,
   .image-pair figure:first-child,
   .orbit,
   .float-object,
