@@ -276,8 +276,9 @@ a {
 .hero-photo img {
   display: block;
   width: 100%;
-  aspect-ratio: 0.7;
+  aspect-ratio: 0.82;
   object-fit: cover;
+  object-position: center top;
   transform: rotate(0deg);
   border: 8px solid rgba(243, 245, 235, 0.92);
   box-shadow: 0 26px 65px rgba(5, 22, 16, 0.28);
