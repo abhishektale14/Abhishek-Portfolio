@@ -24,6 +24,7 @@
       <nav id="menu">
         <button data-scroll="about" type="button">About</button>
         <button data-scroll="work" type="button">Experience</button>
+        <button data-scroll="projects" type="button">Projects</button>
         <button data-scroll="craft" type="button">Skills</button>
         <button data-scroll="path" type="button">Education</button>
         <button data-scroll="contact" type="button">Contact</button>
@@ -46,7 +47,7 @@
           <span class="float-object object-three"><i></i>System ready</span>
         </div>
         <figure class="hero-photo" data-reveal>
-          <img src="./Gemini_Generated_Image_jl3m34jl3m34jl3m.png" alt="Abhishek standing in a modern agricultural growing environment" />
+          <img src="./profile-photo.jpg" alt="Abhishek standing in a modern agricultural growing environment" />
           <figcaption>Your field perspective</figcaption>
         </figure>
         <div class="hero-copy">
@@ -88,6 +89,22 @@
         </aside>
       </section>
 
+      <aside class="growth-rail" aria-label="Plant growth stages">
+        <p class="growth-label">Growth stages</p>
+        <div class="growth-visual">
+          <span class="growth-fallback">Seed</span>
+          <img src="./seed.jpg" alt="Seed growth stage" data-stage-image="seed" />
+          <img src="./seedling.jpg" alt="Seedling growth stage" data-stage-image="seedling" />
+          <img src="./vegetative.jpg" alt="Vegetative growth stage" data-stage-image="vegetative" />
+          <img src="./flowering.jpg" alt="Flowering growth stage" data-stage-image="flowering" />
+          <img src="./fruiting.jpg" alt="Fruiting growth stage" data-stage-image="fruiting" />
+        </div>
+        <div class="growth-steps" aria-hidden="true">
+          <span class="is-active">01</span><span>02</span><span>03</span><span>04</span><span>05</span>
+        </div>
+        <p class="growth-stage-name">Seed</p>
+      </aside>
+
       <section id="about" class="section about">
         <div class="section-head" data-reveal>
           <p class="kicker">01 — Profile</p>
@@ -102,6 +119,10 @@
             Zoho CRM, Zoho Books, and Zoho Inventory for end-to-end project and client management.
           </p>
           <div class="about-card" data-reveal>
+            <figure class="system-illustration" data-reveal>
+              <img src="./Screenshot 2026-08-26 131845.png" alt="Solar-powered home with a rooftop hydroponic growing system" />
+              <figcaption>Home-scale growing system</figcaption>
+            </figure>
             <h3>How I work</h3>
             <ol>
               <li>Listen, assess the site, and design the right hydroponic setup.</li>
@@ -189,9 +210,48 @@
         </div>
       </section>
 
+      <section id="projects" class="section projects">
+        <div class="section-head" data-reveal>
+          <p class="kicker">03 — Projects</p>
+          <h2>Selected systems, still taking shape.</h2>
+        </div>
+        <div class="project-grid">
+          <article class="project-card" data-reveal>
+            <span class="project-index">01</span>
+            <h3>[PROJECT NAME]</h3>
+            <p>[DESCRIPTION]</p>
+            <dl>
+              <div><dt>Role</dt><dd>[YOUR ROLE]</dd></div>
+              <div><dt>Tools / systems</dt><dd>[TOOLS OR SYSTEMS USED]</dd></div>
+              <div><dt>Outcome</dt><dd>[OUTCOME]</dd></div>
+            </dl>
+          </article>
+          <article class="project-card" data-reveal>
+            <span class="project-index">02</span>
+            <h3>[PROJECT NAME]</h3>
+            <p>[DESCRIPTION]</p>
+            <dl>
+              <div><dt>Role</dt><dd>[YOUR ROLE]</dd></div>
+              <div><dt>Tools / systems</dt><dd>[TOOLS OR SYSTEMS USED]</dd></div>
+              <div><dt>Outcome</dt><dd>[OUTCOME]</dd></div>
+            </dl>
+          </article>
+          <article class="project-card" data-reveal>
+            <span class="project-index">03</span>
+            <h3>[PROJECT NAME]</h3>
+            <p>[DESCRIPTION]</p>
+            <dl>
+              <div><dt>Role</dt><dd>[YOUR ROLE]</dd></div>
+              <div><dt>Tools / systems</dt><dd>[TOOLS OR SYSTEMS USED]</dd></div>
+              <div><dt>Outcome</dt><dd>[OUTCOME]</dd></div>
+            </dl>
+          </article>
+        </div>
+      </section>
+
       <section id="craft" class="section craft">
         <div class="section-head" data-reveal>
-          <p class="kicker">03 — Skills</p>
+          <p class="kicker">04 — Skills</p>
           <h2>A toolkit that covers the farm, the site, and the client file.</h2>
         </div>
         <div class="skill-grid">
@@ -237,13 +297,19 @@
           <p>From crop health and site assessment to installation and client handover, every detail has to work together.</p>
         </div>
         <div class="image-pair">
-          <figure data-reveal>
-            <img src="./greenhouse-crops.jpg" alt="Leafy crop growing in a greenhouse" />
-            <figcaption>Crop health</figcaption>
+          <figure class="growth-video" data-reveal>
+            <div class="growth-video-frames" aria-label="Leafy crop growing from seed to fruiting plant">
+              <img src="./seed.jpg" alt="Seed stage" />
+              <img src="./seedling.jpg" alt="Seedling stage" />
+              <img src="./vegetative.jpg" alt="Small leafy crop stage" />
+              <img src="./flowering.jpg" alt="Flowering crop stage" />
+              <img src="./fruiting.jpg" alt="Large fruiting crop stage" />
+            </div>
+            <figcaption>Crop growth · 4 sec cycle</figcaption>
           </figure>
           <figure data-reveal>
-            <img src="./hydroponic-system.jpg" alt="Hydroponic plants growing in a controlled system" />
-            <figcaption>System delivery</figcaption>
+            <img src="./hydroponic-systems.jpg" alt="Dutch bucket hydroponic system" />
+            <figcaption>NFT + Dutch bucket system</figcaption>
           </figure>
         </div>
       </section>

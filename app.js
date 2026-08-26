@@ -54,7 +54,7 @@ document.querySelectorAll(".job-head").forEach((button) => {
 });
 
 const navButtons = [...document.querySelectorAll("#menu button")];
-const sectionIds = ["about", "work", "craft", "path", "contact"];
+const sectionIds = ["about", "work", "projects", "craft", "path", "contact"];
 
 sectionIds.forEach((id) => {
   const el = document.getElementById(id);
@@ -70,6 +70,37 @@ sectionIds.forEach((id) => {
   );
   observer.observe(el);
 });
+
+const growthStages = ["seed", "seedling", "vegetative", "flowering", "fruiting"];
+const growthImages = [...document.querySelectorAll("[data-stage-image]")];
+const growthSteps = [...document.querySelectorAll(".growth-steps span")];
+const growthName = document.querySelector(".growth-stage-name");
+const growthVisual = document.querySelector(".growth-visual");
+const growthSections = ["top", "about", "work", "projects", "craft"];
+
+const setGrowthStage = (index) => {
+  const stage = growthStages[index];
+  growthImages.forEach((image) => image.classList.toggle("is-active", image.dataset.stageImage === stage && !image.hidden));
+  growthSteps.forEach((step, stepIndex) => step.classList.toggle("is-active", stepIndex === index));
+  if (growthName) growthName.textContent = stage;
+};
+
+growthImages.forEach((image) => {
+  image.addEventListener("error", () => {
+    image.hidden = true;
+    growthVisual?.classList.remove("has-image");
+  });
+  image.addEventListener("load", () => growthVisual?.classList.add("has-image"));
+});
+
+growthSections.forEach((id, index) => {
+  const section = document.getElementById(id);
+  if (!section) return;
+  new IntersectionObserver(([entry]) => {
+    if (entry.isIntersecting) setGrowthStage(index);
+  }, { rootMargin: "-35% 0px -50% 0px", threshold: 0.05 }).observe(section);
+});
+setGrowthStage(0);
 
 const revealNodes = document.querySelectorAll("[data-reveal]");
 revealNodes.forEach((node, index) => {
@@ -89,7 +120,7 @@ const revealObserver = new IntersectionObserver(
 revealNodes.forEach((node) => revealObserver.observe(node));
 
 if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
-  document.querySelectorAll(".about-card, .skill-card, .program, .contact-card, .job").forEach((card) => {
+  document.querySelectorAll(".about-card, .skill-card, .program, .contact-card, .job, .project-card").forEach((card) => {
     card.addEventListener("pointermove", (event) => {
       const bounds = card.getBoundingClientRect();
       const x = (event.clientX - bounds.left) / bounds.width - 0.5;
